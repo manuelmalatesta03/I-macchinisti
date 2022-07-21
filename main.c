@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-
+#include "sottofunzioni.h"
 
 #define MIN_BINARI_STAZIONE 5
 #define MAX_BINARI_STAZIONE 10
@@ -47,7 +47,7 @@ int main()
 //binari della stazione
 //indica il turno del ciclo (quindi anche lo score del giocatore
 //quanti treni sono comparsi a causa della flip-coin
-//quanti treni ho gi‡ consegnato in stazione
+//quanti treni ho gi√† consegnato in stazione
 //per sistemarre delle variabil iniziali
 //Binario[0].stato_binario = -5; caso in cui non seleziono alcun binari
 
@@ -60,14 +60,14 @@ int main()
     int modulo_b_stazione=0-b_stazione;
     int attesa_fuori_stazione = b_stazione-3;
     int attesa_in_stazione = 3*modulo_b_stazione/2;
-//per quanti turni il treno puÚ aspettare
+//per quanti turni il treno pu√≤ aspettare
 //tempo necessario prima di lasciare la stazione
 
     printf("ISTRUZIONI:\nAd ogni nuovo turno hai il 50/100 di possibilita' dell'arrivo di un nuovo treno che vuole entrare in stazione;\n");
     printf("La stazione ha %d binari;\n",b_stazione);
     printf("I treni impiegano %d turni per libarare il binario\nI treni possono aspettare al massimo %d turni fuori dalla stazione;\n",-attesa_in_stazione, attesa_fuori_stazione);
     printf("Ad ogni turno dovrai indicare ai treni in attesa in quale binario posizionarsi(nel caso si collochino due treni nello stesso binario sara' GAME OVER);\nPuoi indicare a tutti i treni in attesa di aspettare fuori dalla stazione selezionando il binario 0\n\n");
-    sleep(15);
+    sleep(10);
 
     //setting
     for(setting=0;setting<=50;setting++)
